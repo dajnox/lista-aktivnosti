@@ -1,0 +1,380 @@
+/*
+    Lista aktivnosti - CSS Style
+
+    Author: hajrudin.dev / Hajrudin Softic
+
+    Licence: MIT
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass';
+    background-color: hsl(235, 21%, 11%);
+    font-size: 18px;
+    justify-content: center;
+}
+
+.topheader-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 350px;
+    z-index: -1;
+}
+
+.topheader-image img {
+    width: 100%;
+    object-fit: cover;
+    min-height: 350px;
+    object-position: left;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 30px;
+    margin-top: 100px;
+}
+
+.title {
+        color: white;
+    letter-spacing: 0px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title span {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-style: italic;
+    display: inherit;
+}
+
+.new-hajroakt {
+    width: 100%;
+    height: 70px;
+    background-color: hsl(235, 24%, 19%);
+    margin-top: 50px;
+    border-radius: 6px;
+    display: flex;
+}
+
+.new-hajroakt:hover {
+    border: 1px solid hsl(220, 98%, 61%);
+}
+
+.check{
+    flex-basis: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid hsl(237, 14%, 26%);
+    transition: all 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-mark img {
+    visibility: hidden;
+}
+
+.check-mark.checked img, .check-mark:hover img {
+    visibility: visible;
+}
+
+.check-mark:hover {
+    border-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);   
+}
+
+.check-mark.checked {
+    background-color: pink;
+    background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);   
+}
+
+.hajroakt-text.checked {
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+}
+
+.new-hajroakt-input {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.new-hajroakt-input input {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: hsl(234, 39%, 85%);
+}
+
+.new-hajroakt-input form {
+    flex-grow: 1;
+    display: flex;
+}
+
+.new-hajroakt-input input::placeholder {
+    color: hsl(233, 14%, 35%);
+}
+
+.hajroakt-text {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: hsl(234, 39%, 85%);
+}
+
+.hajroakt-text span {
+    color: hsl(234, 39%, 85%);
+    text-align: center;
+    font-size: 20px;
+    display: block;
+}
+
+.hajroakt-item {
+    width: 100%;
+    height: 70px;
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    border-bottom: 1px solid hsl(237, 14%, 26%);
+    cursor: pointer;
+    transition: all .25s ease;
+    transition-property: box-shadow, transform, border-color;
+}
+
+.hajroakt-items-wrapper {
+    margin-top: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: hsl(235, 24%, 19%);
+    box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.4);
+    margin-bottom: 30px;
+}
+
+
+.ucitavanje-wrapper {
+    margin-top: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: hsl(235, 24%, 19%);
+    box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.4);
+    margin-bottom: 30px;
+    padding: 2rem;
+}
+
+.ucitavanje-wrapper h3 {
+    color: hsl(234, 39%, 85%);
+    text-align: center;
+    font-size: 20px;
+}
+
+.ucitavanje-wrapper span {
+    color: hsl(234, 39%, 85%);
+    text-align: center;
+    font-size: 20px;
+    display: block;
+}
+
+.hajroakt-items-info {
+    width: 100%;
+    height: 70px;
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    align-items: center;
+    color: hsl(233, 14%, 35%);
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+.items-statuses {
+    display: flex;
+    justify-content: center;
+}
+
+.items-statuses span  {
+    padding: 0 4px;
+    cursor: pointer;
+}
+
+.items-clear {
+    cursor: pointer;
+    text-align: end;
+}
+
+.items-statuses span:hover, .items-clear:hover {
+    color: hsl(220, 98%, 61%);
+}
+
+.items-statuses .active  {
+    color: hsl(220, 98%, 61%);
+}
+
+.hajroakt-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
+    border-color: hsl(235, 24%, 19%);
+}
+
+.footer {
+    padding: 2rem 0 0 0;
+    text-align: center;
+    font-family: 'Overpass';
+}
+
+.footer p {
+    color: hsl(234, 39%, 85%);
+    font-size: 15px;
+
+}
+
+.footer a {
+    text-decoration: none;
+    color: hsl(220, 98%, 61%);
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: hsl(220, 63%, 51%);
+}
+
+.footer img {
+    width: 10%;
+    margin-bottom: -1rem;
+}
+
+.time-wrapper {
+    width: 100%;
+    height: 70px;
+    margin-top: 50px;
+    
+}
+
+.time-wrapper .time-box {
+    background-color: hsl(235, 24%, 19%);
+    justify-content: center;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 6px;
+    color: #fff;
+    text-align: center;
+}
+
+.time-wrapper .time-box .show-digital {
+    padding-top: 2rem;
+}
+
+.time-wrapper .time-box .shortcut-text p {
+    font-family: 'Cookie', cursive;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.clock {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    margin:auto;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/clock.png');
+    background-size: cover;
+    border: 4px solid #393a4c;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgb(85 85 85 / 5%), inset 0 -15px 15px rgb(255 255 255 / 5%), 0 15px 15px rgb(21 19 19 / 30%), inset 0 15px 15px rgb(0 0 0 / 30%);
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour, .hr {
+    width: 160px;
+    height: 130px;
+}
+
+.clock .min, .mn {
+    width: 142px;
+    height: 121px;
+}
+.clock .sec, .sc {
+    width: 230px;
+    height: 120px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 67px;
+    background: #307be8;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 71px;
+    background: #fff;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 83px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+
+/* Kraj css stajlinga */

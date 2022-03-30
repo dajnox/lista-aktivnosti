@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista aktivnosti - Pocetna</title>
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stajling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="app/css/hajrudin_dev.css">
+
+</head>
+<body>
+    <div class="topheader-image">
+        <img src="app/img/bg-desktop-dark.jpg">
+    </div>
+    <div class="container">
+        <div class="row">
+        <div class="header">
+            <div class="title">
+                Lista aktivnosti <span>Budi uvijek u toku!</span>
+            </div>
+            <div class="theme">
+                <img src="app/img/icon-sun.svg">
+            </div>
+        </div>
+        
+        <div class="col-md-9 col-lg-9">
+            <div class="new-hajroakt">
+                <div class="check">
+                    <div class="check-mark">
+                    </div>
+                </div>
+                <div class="new-hajroakt-input">
+                    <form onsubmit="addItem(event)">
+                        <input id="hajroakt-input" type="text" placeholder="Unesi novu aktivnost..." />
+                    </form>
+                </div>
+            </div>
+            <div class="hajroakt-items-wrapper">
+                <div class="hajroakt-items">
+                    <div class="hajroakt-item">
+                        <div class="check">
+                            <div class="check-mark">
+                                <img src="app/img/icon-check.svg" />
+                            </div>
+                        </div>
+                        <div class="hajroakt-text">
+                            Ucitavaju se liste aktivnosti...<span> Molimo da sacekate!</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="time-wrapper">
+                    <div class="time-box">
+                        <div class="clock">
+                            <div class="hour">
+                                <div class="hr" id="hr"></div>
+                            </div>
+                            <div class="min">
+                                <div class="mn" id="mn"></div>
+                            </div>
+                            <div class="sec">
+                            <div class="sc" id="sc"></div>
+                        </div>
+                    </div>
+                    <div class="show-digital">
+                        <p id="datetime"></p>
+                    </div>
+                    <div class="shortcut-text">
+                        <p>"Life could be a dream"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="col-md-12 col-lg-12">
+                <img class="img-fluid img-container" src="app/img/h-png.png" alt="logo"/>
+                <p>Coded by <a href="">hajrudin.dev</a> with ☕</p>
+            </div>
+        </div>
+    </div>
+    
+
+    
+</body>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Firebase JS -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<!-- Moji custom JS -->
+<script src="./app/js/firebase.js"></script>
+<script src="./app/js/script.js"></script>
+<script src="./app/js/curr_time.js"></script>
+
+
+</html>
